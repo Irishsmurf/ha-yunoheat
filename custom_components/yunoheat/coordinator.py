@@ -34,6 +34,7 @@ class YunoHeatData:
 
     balance: float
     latest_event: UsageEvent | None
+    recent_events: list[UsageEvent]
 
 
 class YunoHeatDataUpdateCoordinator(DataUpdateCoordinator[YunoHeatData]):
@@ -77,7 +78,7 @@ class YunoHeatDataUpdateCoordinator(DataUpdateCoordinator[YunoHeatData]):
             events = await self.client.get_usage_events(
                 date_from=now - timedelta(days=USAGE_LOOKBACK_DAYS),
                 date_to=now,
-                count=1,
+                count=10,
                 order="desc",
             )
         except (YunoHeatAuthFailed, AuthError) as err:
@@ -93,4 +94,5 @@ class YunoHeatDataUpdateCoordinator(DataUpdateCoordinator[YunoHeatData]):
         return YunoHeatData(
             balance=bill.open_bill_due,
             latest_event=events.objects[0] if events.objects else None,
+            recent_events=events.objects,
         )

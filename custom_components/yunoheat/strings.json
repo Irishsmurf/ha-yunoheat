@@ -48,6 +48,9 @@
       },
       "meter_reading": {
         "name": "Meter reading"
+      },
+      "cumulative_usage": {
+        "name": "Cumulative usage"
       }
     }
   }
