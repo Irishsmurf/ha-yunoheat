@@ -1,0 +1,13 @@
+{
+  "domain": "yunoheat",
+  "name": "Yuno Energy Heat",
+  "codeowners": ["@Irishsmurf"],
+  "config_flow": true,
+  "documentation": "https://github.com/Irishsmurf/ha-yunoheat",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Irishsmurf/ha-yunoheat/issues",
+  "loggers": ["yunoheat"],
+  "requirements": ["pyyunoheat==0.2.1"],
+  "version": "0.1.0"
+}

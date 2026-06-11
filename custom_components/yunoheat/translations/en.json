@@ -1,0 +1,54 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Yuno Energy Heat",
+        "description": "Enter the credentials for your Yuno Energy account.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        },
+        "data_description": {
+          "email": "The email address you use to sign in to the Yuno Energy portal.",
+          "password": "Your Yuno Energy account password."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate Yuno Energy Heat",
+        "description": "The password for {email} is no longer valid. Enter your current password.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid email address or password",
+      "cannot_connect": "Failed to connect to the Yuno Heat API",
+      "unknown": "Unexpected error"
+    },
+    "abort": {
+      "already_configured": "This Yuno Energy account is already configured",
+      "reauth_successful": "Re-authentication was successful",
+      "unique_id_mismatch": "These credentials belong to a different Yuno Energy account"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "balance": {
+        "name": "Outstanding balance"
+      },
+      "latest_usage": {
+        "name": "Latest usage"
+      },
+      "latest_cost": {
+        "name": "Latest cost"
+      },
+      "last_reading": {
+        "name": "Last reading"
+      },
+      "meter_reading": {
+        "name": "Meter reading"
+      }
+    }
+  }
+}
