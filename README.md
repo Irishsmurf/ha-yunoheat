@@ -12,6 +12,7 @@ A [Home Assistant](https://www.home-assistant.io/) custom integration that bring
 sensors — your outstanding balance, latest usage and cost, the last meter reading, and a
 cumulative total ready for the [Energy dashboard](https://www.home-assistant.io/docs/energy/).
 
+[![Documentation](https://img.shields.io/badge/docs-irishsmurf.github.io-363086.svg)](https://irishsmurf.github.io/ha-yunoheat/)
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-363086.svg)](https://hacs.xyz/)
 [![Validate](https://github.com/Irishsmurf/ha-yunoheat/actions/workflows/validate.yaml/badge.svg)](https://github.com/Irishsmurf/ha-yunoheat/actions/workflows/validate.yaml)
 [![Hassfest](https://github.com/Irishsmurf/ha-yunoheat/actions/workflows/hassfest.yaml/badge.svg)](https://github.com/Irishsmurf/ha-yunoheat/actions/workflows/hassfest.yaml)
@@ -88,9 +89,10 @@ rolling window of recent events.
 
 ## Documentation
 
-Full documentation — a user guide, the architecture overview, and contribution
-instructions — lives in [`docs/`](docs/) and is published as a [MkDocs](https://www.mkdocs.org/)
-site. To preview it locally:
+📖 **Full documentation is published at <https://irishsmurf.github.io/ha-yunoheat/>** — a
+user guide, the architecture overview, and contribution instructions. The sources live in
+[`docs/`](docs/) and are built as a [MkDocs](https://www.mkdocs.org/) site. To preview it
+locally:
 
 ```bash
 pip install -r requirements-docs.txt
