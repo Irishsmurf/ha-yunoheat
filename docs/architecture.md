@@ -7,20 +7,18 @@ just understand what happens behind the sensors. All code lives in
 
 ## Data flow
 
-```
-async_setup_entry (__init__.py)
-        │  build YunoHeatClient — resume from saved tokens,
-        │  else fresh email/password login
-        ▼
-YunoHeatDataUpdateCoordinator (coordinator.py)
-        │  _async_setup: resolve EntityContext (meter identifier)
-        │  _async_update_data: every 6 hours fetch
-        │     • open bill balance
-        │     • last 60 days of usage events
-        ▼
-YunoHeatData dataclass  ──►  entry.runtime_data
-        ▼
-sensor platform (sensor.py) reads runtime_data
+```mermaid
+flowchart TD
+    A["async_setup_entry<br/>(__init__.py)"]
+    B["YunoHeatDataUpdateCoordinator<br/>(coordinator.py)"]
+    C["YunoHeatData dataclass"]
+    D["entry.runtime_data"]
+    E["sensor platform<br/>(sensor.py)"]
+
+    A -->|"build YunoHeatClient — resume from saved<br/>tokens, else fresh email/password login"| B
+    B -->|"_async_setup: resolve EntityContext (meter id)<br/>_async_update_data: poll every 6h for balance<br/>+ last 60 days of usage events"| C
+    C --> D
+    D -->|"read on each update"| E
 ```
 
 The coordinator is stored on `entry.runtime_data`, typed through the
