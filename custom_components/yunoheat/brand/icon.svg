@@ -1,34 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <defs>
-    <linearGradient id="flameGrad" gradientUnits="userSpaceOnUse" x1="140" y1="472" x2="372" y2="40">
-      <stop offset="0%" stop-color="#2BD9DE"/>
-      <stop offset="50%" stop-color="#4A7CF0"/>
-      <stop offset="100%" stop-color="#6D3BD9"/>
-    </linearGradient>
-  </defs>
-
-  <!-- peach sunburst rays -->
-  <g stroke="#F5B8A0" stroke-width="26" stroke-linecap="round" fill="none">
-    <line x1="139" y1="121" x2="113" y2="89"/>
-    <line x1="256" y1="78"  x2="256" y2="40"/>
-    <line x1="373" y1="121" x2="399" y2="89"/>
+  <defs><linearGradient id="dropGrad" gradientUnits="userSpaceOnUse" x1="256" y1="472" x2="256" y2="132"><stop offset="0%" stop-color="#20D5DF"/><stop offset="52%" stop-color="#3C79EE"/><stop offset="100%" stop-color="#5C3FD6"/></linearGradient></defs>
+  <g id="icon">
+    <g stroke="#F4C3B0" stroke-width="26" stroke-linecap="round" fill="none">
+      <line x1="139" y1="121" x2="113" y2="89"/>
+      <line x1="256" y1="78"  x2="256" y2="40"/>
+      <line x1="373" y1="121" x2="399" y2="89"/>
+    </g>
+    <path fill="url(#dropGrad)" d="M 276 132 C 280 168, 296 194, 314 220 C 344 262, 372 306, 372 360 C 372 425, 320 472, 256 472 C 192 472, 140 425, 140 360 C 140 296, 180 248, 214 208 C 240 178, 262 156, 276 132 Z"/>
+    <path fill="#F7D2C4" d="M 256 306 C 256 306, 202 360, 202 398 C 202 428, 226 450, 256 450 C 286 450, 310 428, 310 398 C 310 360, 256 306, 256 306 Z"/>
   </g>
-
-  <!-- outer flame, cyan→purple gradient -->
-  <path fill="url(#flameGrad)" d="
-    M 276 132
-    C 280 168, 296 194, 314 220
-    C 344 262, 372 306, 372 360
-    C 372 425, 320 472, 256 472
-    C 192 472, 140 425, 140 360
-    C 140 296, 180 248, 214 208
-    C 240 178, 262 156, 276 132 Z"/>
-
-  <!-- inner peach flame -->
-  <path fill="#F8CDB8" d="
-    M256 306
-    C 256 306, 202 360, 202 398
-    C 202 428, 226 450, 256 450
-    C 286 450, 310 428, 310 398
-    C 310 360, 256 306, 256 306 Z"/>
 </svg>
