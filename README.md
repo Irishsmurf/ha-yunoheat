@@ -1,4 +1,11 @@
+<img src="custom_components/yunoheat/brand/icon.png" alt="Yuno Energy Heat icon" align="right" width="96">
+
 # Yuno Energy Heat
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="custom_components/yunoheat/brand/dark_logo.png">
+  <img alt="Yuno Energy Heat" src="custom_components/yunoheat/brand/logo.png" height="64">
+</picture>
 
 Home Assistant integration for Yuno Energy Heat.
 
