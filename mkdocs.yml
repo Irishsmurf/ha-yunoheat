@@ -1,0 +1,68 @@
+site_name: Yuno Energy Heat
+site_description: >-
+  Home Assistant custom integration exposing a Yuno Energy Heat communal-heating
+  account as sensors.
+site_url: https://irishsmurf.github.io/ha-yunoheat/
+repo_name: Irishsmurf/ha-yunoheat
+repo_url: https://github.com/Irishsmurf/ha-yunoheat
+edit_uri: edit/main/docs/
+copyright: >-
+  Unofficial community integration — not affiliated with or endorsed by Yuno Energy.
+
+theme:
+  name: material
+  logo: assets/icon.png
+  favicon: assets/icon.png
+  font:
+    text: Quicksand
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # Brand indigo (#363086) in light mode, lighter in dark mode for contrast.
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - content.action.edit
+    - content.code.copy
+    - toc.follow
+
+extra_css:
+  - stylesheets/brand.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - User guide: user-guide.md
+  - Architecture: architecture.md
+  - Contributing: contributing.md

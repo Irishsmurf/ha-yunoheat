@@ -1,0 +1,42 @@
+/* Yuno Energy Heat brand palette.
+ * Wordmark indigo #363086; icon gradient teal #20D5DF -> blue #3C79EE -> purple #5C3FD6;
+ * flame accent peach #F4C3B0. */
+
+:root {
+  --yuno-indigo: #363086;
+  --yuno-teal: #20d5df;
+  --yuno-blue: #3c79ee;
+  --yuno-purple: #5c3fd6;
+}
+
+/* Light mode: indigo primary, blue accent. */
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: var(--yuno-indigo);
+  --md-primary-fg-color--light: #4a43a6;
+  --md-primary-fg-color--dark: #282468;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffffb3;
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--yuno-blue);
+  --md-accent-fg-color--transparent: #3c79ee1a;
+}
+
+/* Dark (slate) mode: lift the primary off near-black so it reads on the dark bar. */
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+  --md-primary-fg-color: #4a43a6;
+  --md-typeset-a-color: #8ea2ff;
+}
+
+/* A subtle brand gradient strip under the header, echoing the icon. */
+.md-header {
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      var(--yuno-teal),
+      var(--yuno-blue),
+      var(--yuno-purple)
+    )
+    1;
+}
